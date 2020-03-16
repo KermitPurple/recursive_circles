@@ -15,7 +15,7 @@ class RecursiveCircle:
         self.r = int(r)
 
     def draw(self):
-        if self.r > 1:
+        if self.r > 0:
             if self.pos[0] + self.r > 0 and self.pos[0] - self.r < self.size[0] and self.pos[1] + self.r > 0 and self.pos[1] - self.r < self.size[1]:
                 pygame.draw.circle(self.screen, self.getcolor(), self.pos, int(self.r), 1)
             if RecursiveCircle.right:
