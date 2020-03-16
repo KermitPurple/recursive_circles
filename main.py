@@ -21,6 +21,8 @@ while running:
                 RecursiveCircle.up = not RecursiveCircle.up
             elif event.key == pygame.K_DOWN:
                 RecursiveCircle.down = not RecursiveCircle.down
+            elif event.unicode == 'q':
+                running = False
     screen.fill((0,0,0))
     circle.draw()
     pygame.display.update()
