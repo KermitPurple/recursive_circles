@@ -7,6 +7,7 @@ pygame.display.init()
 size = 650,650
 screen = pygame.display.set_mode(size)
 circle = RecursiveCircle(screen, size,(int(size[0]/2),int(size[1]/2)), 160)
+circle.printcontrols()
 running = True
 pygame.key.set_repeat(60)
 while running:

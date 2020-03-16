@@ -31,3 +31,11 @@ class RecursiveCircle:
         color = pygame.Color(255,255,255)
         color.hsva = (self.color, 100, 100)
         return color
+
+    def printcontrols(self):
+        print("=" * 75)
+        print("<ARROWKEYS> = Toggle directional recursion")
+        print("+ = Increase radius of initial triangle")
+        print("- = Decrease radius of initial triangle")
+        print("q = Quit")
+        print("=" * 75)
