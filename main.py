@@ -27,11 +27,25 @@ while running:
                 running = False
             elif event.unicode == '=':
                 circle.r = 160
+                RecursiveCircle.scale = 0.5
+                RecursiveCircle.translation_scale = 1
             elif event.unicode == '+':
                     circle.r += 5
             elif event.unicode == '-':
                 if circle.r > 5:
                     circle.r -= 5
+            elif event.unicode == '<':
+                if RecursiveCircle.scale > 0:
+                    RecursiveCircle.scale -= 0.01
+            elif event.unicode == '>':
+                if RecursiveCircle.scale < 1:
+                    RecursiveCircle.scale += 0.01
+            elif event.unicode == 'k':
+                RecursiveCircle.translation_scale -= 0.01
+                if RecursiveCircle.translation_scale < 0:
+                    RecursiveCircle.translation_scale = 0
+            elif event.unicode == 'l':
+                RecursiveCircle.translation_scale += 0.01
     screen.fill((0,0,0))
     circle.draw()
     pygame.display.update()
